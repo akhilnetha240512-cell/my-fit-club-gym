@@ -24,7 +24,7 @@ document.getElementById('enquiryForm').addEventListener('submit', event => {
   const plan = String(form.get('plan') || 'Not sure yet');
   const message = String(form.get('message') || '').trim();
   // Replace this demo number with the gym owner's WhatsApp number, country code included.
-  const gymWhatsAppNumber = '91XXXXXXXXXX';
+  const gymWhatsAppNumber = '918332086769';
   const text = `Hello Power Gym! My name is ${name}. My phone number is ${phone}. I'm interested in: ${plan}. ${message}`;
   if (gymWhatsAppNumber.includes('X')) {
     alert('Demo form ready! Before publishing, replace 91XXXXXXXXXX in script.js with the gym owner’s WhatsApp number.');
