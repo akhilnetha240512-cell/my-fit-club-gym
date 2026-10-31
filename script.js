@@ -1,6 +1,0 @@
-const menu=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');menu?.addEventListener('click',()=>nav.classList.toggle('open'));
-document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-document.getElementById('year').textContent=new Date().getFullYear();
-let scale=1;function applyScale(){document.documentElement.style.fontSize=(16*scale)+'px'}
-document.getElementById('decreaseText').addEventListener('click',()=>{scale=Math.max(.85,scale-.05);applyScale()});document.getElementById('resetText').addEventListener('click',()=>{scale=1;applyScale()});document.getElementById('increaseText').addEventListener('click',()=>{scale=Math.min(1.2,scale+.05);applyScale()});
-const translations={"About":"మా గురించి","Training":"శిక్షణ","Equipment":"పరికరాలు","Membership":"మెంబర్‌షిప్","Contact":"సంప్రదించండి"};let telugu=false;document.getElementById('languageToggle').addEventListener('click',e=>{telugu=!telugu;document.querySelectorAll('.nav a').forEach(a=>{const en=a.dataset.en||a.textContent.trim();a.dataset.en=en;a.textContent=telugu?(translations[en]||en):en});e.currentTarget.textContent=telugu?'English':'తెలుగు';document.querySelector('.hero-sub').textContent=telugu?'శిక్షణతో బలాన్ని పెంచుకోండి. ప్రతి రోజూ ముందుకు సాగండి.':'Train with focus. Build strength. Make every session count.'});
